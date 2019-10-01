@@ -83,7 +83,21 @@ class LoginViewController: UIViewController, LoginDisplayLogic
         //nameTextField.text = viewModel.name
     }
     
-    @IBAction func btn_Login(_ sender: Any) {
+    @IBAction func btn_Login(_ sender: Any)
+    {
+        //Faz as validações se os campos de login foram preenchidos
+        let email = txt_email.text
+        let senha = txt_senha.text
         
+        if !email!.isEmpty || !senha!.isEmpty
+        {
+            //Os campos estão preenchidos
+            let request = Login.Something.Request()
+            interactor?.doSomething(request: request)
+        }
+        else
+        {
+            print("Os campos de login e senha deve ser preenchidos. Colocar isso em alert")
+        }
     }
 }

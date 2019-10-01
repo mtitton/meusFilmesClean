@@ -1,0 +1,6 @@
+framework module Pods_meusFilmesClean {
+  umbrella header "Pods-meusFilmesClean-umbrella.h"
+
+  export *
+  module * { export * }
+}
