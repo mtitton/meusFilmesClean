@@ -20,7 +20,9 @@
 		A90193342343B7EE0052CA00 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A901932E2343B7EE0052CA00 /* LoginViewController.swift */; };
 		A90193352343B7EE0052CA00 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A901932F2343B7EE0052CA00 /* LoginInteractor.swift */; };
 		A90193382343C23B0052CA00 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90193372343C23A0052CA00 /* LoginService.swift */; };
-		A901933A2343CCEF0052CA00 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A90193392343CCEF0052CA00 /* GoogleService-Info.plist */; };
+		A901933D234611700052CA00 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A901933C234611700052CA00 /* UserModel.swift */; };
+		A9019340234614640052CA00 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A901933F234614640052CA00 /* Extension.swift */; };
+		A9019342234624E10052CA00 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9019341234624E10052CA00 /* GoogleService-Info.plist */; };
 		D944FEBF718A759CE92FD499 /* Pods_meusFilmesCleanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0868FF4A33BADDF8C89A9943 /* Pods_meusFilmesCleanTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +57,9 @@
 		A901932E2343B7EE0052CA00 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A901932F2343B7EE0052CA00 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		A90193372343C23A0052CA00 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
-		A90193392343CCEF0052CA00 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A901933C234611700052CA00 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		A901933F234614640052CA00 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		A9019341234624E10052CA00 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BBEDF8232D51B89C1B5A0AE9 /* Pods-meusFilmesClean.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meusFilmesClean.debug.xcconfig"; path = "Target Support Files/Pods-meusFilmesClean/Pods-meusFilmesClean.debug.xcconfig"; sourceTree = "<group>"; };
 		E6EA2796567AC453611F2C3F /* Pods-meusFilmesCleanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meusFilmesCleanTests.debug.xcconfig"; path = "Target Support Files/Pods-meusFilmesCleanTests/Pods-meusFilmesCleanTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,14 +127,16 @@
 		A90193072343891D0052CA00 /* meusFilmesClean */ = {
 			isa = PBXGroup;
 			children = (
-				A90193362343C2270052CA00 /* services */,
-				A90193282343B7B80052CA00 /* scenes */,
+				A901933E234614350052CA00 /* Helpers */,
+				A901933B2346112F0052CA00 /* Models */,
+				A90193362343C2270052CA00 /* Services */,
+				A90193282343B7B80052CA00 /* Scenes */,
 				A90193082343891D0052CA00 /* AppDelegate.swift */,
 				A901930C2343891D0052CA00 /* Main.storyboard */,
 				A901930F2343891F0052CA00 /* Assets.xcassets */,
 				A90193112343891F0052CA00 /* LaunchScreen.storyboard */,
 				A90193142343891F0052CA00 /* Info.plist */,
-				A90193392343CCEF0052CA00 /* GoogleService-Info.plist */,
+				A9019341234624E10052CA00 /* GoogleService-Info.plist */,
 			);
 			path = meusFilmesClean;
 			sourceTree = "<group>";
@@ -144,15 +150,15 @@
 			path = meusFilmesCleanTests;
 			sourceTree = "<group>";
 		};
-		A90193282343B7B80052CA00 /* scenes */ = {
+		A90193282343B7B80052CA00 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				A90193292343B7DA0052CA00 /* login */,
+				A90193292343B7DA0052CA00 /* Login */,
 			);
-			path = scenes;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
-		A90193292343B7DA0052CA00 /* login */ = {
+		A90193292343B7DA0052CA00 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				A901932A2343B7EE0052CA00 /* LoginPresenter.swift */,
@@ -162,15 +168,31 @@
 				A901932E2343B7EE0052CA00 /* LoginViewController.swift */,
 				A901932F2343B7EE0052CA00 /* LoginInteractor.swift */,
 			);
-			path = login;
+			path = Login;
 			sourceTree = "<group>";
 		};
-		A90193362343C2270052CA00 /* services */ = {
+		A90193362343C2270052CA00 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				A90193372343C23A0052CA00 /* LoginService.swift */,
 			);
-			path = services;
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A901933B2346112F0052CA00 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A901933C234611700052CA00 /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A901933E234614350052CA00 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A901933F234614640052CA00 /* Extension.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A90193132343891F0052CA00 /* LaunchScreen.storyboard in Resources */,
-				A901933A2343CCEF0052CA00 /* GoogleService-Info.plist in Resources */,
+				A9019342234624E10052CA00 /* GoogleService-Info.plist in Resources */,
 				A90193102343891F0052CA00 /* Assets.xcassets in Resources */,
 				A901930E2343891D0052CA00 /* Main.storyboard in Resources */,
 			);
@@ -347,8 +369,10 @@
 				A90193092343891D0052CA00 /* AppDelegate.swift in Sources */,
 				A90193382343C23B0052CA00 /* LoginService.swift in Sources */,
 				A90193352343B7EE0052CA00 /* LoginInteractor.swift in Sources */,
+				A9019340234614640052CA00 /* Extension.swift in Sources */,
 				A90193332343B7EE0052CA00 /* LoginModels.swift in Sources */,
 				A90193322343B7EE0052CA00 /* LoginRouter.swift in Sources */,
+				A901933D234611700052CA00 /* UserModel.swift in Sources */,
 				A90193312343B7EE0052CA00 /* LoginWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

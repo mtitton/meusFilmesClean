@@ -38,7 +38,7 @@
                                         <rect key="frame" x="0.0" y="49" width="325" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztr-r2-hbk">
                                         <rect key="frame" x="0.0" y="98" width="325" height="30"/>
@@ -48,7 +48,6 @@
                                         </state>
                                         <connections>
                                             <action selector="btn_Login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ztw-uy-pB4"/>
-                                            <segue destination="z3i-pw-cJc" kind="show" identifier="listaFilmes" id="Nf8-gB-SbV"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -67,6 +66,7 @@
                     <connections>
                         <outlet property="txt_email" destination="QG5-nG-aDQ" id="44A-qp-Q9g"/>
                         <outlet property="txt_senha" destination="cf0-uS-vP7" id="aj6-f9-Le3"/>
+                        <segue destination="z3i-pw-cJc" kind="show" identifier="meusFilmes" id="tC3-mm-fe2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -85,7 +85,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="Fex-9D-3cd">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celulaReuso" rowHeight="100" id="Fex-9D-3cd">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Fex-9D-3cd" id="Arj-mK-0eX">

@@ -68,7 +68,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        doSomething()
+        //doSomething()
     }
   
     // MARK: Do something
@@ -91,13 +91,13 @@ class LoginViewController: UIViewController, LoginDisplayLogic
         
         if !email!.isEmpty || !senha!.isEmpty
         {
-            //Os campos estão preenchidos
-            let request = Login.Something.Request()
-            interactor?.doSomething(request: request)
+            //Os campos estão preenchidos, manda para o interactor fazer o trabalho da request
+            let request = Login.User.Request(user: email!, password: senha!)
+            interactor?.doLogin(request: request)
         }
         else
         {
-            print("Os campos de login e senha deve ser preenchidos. Colocar isso em alert")
+            alert(message: "Os campos de e-mail e senha devem estar preenchidos.", title: "Atenção")
         }
     }
 }
