@@ -14,18 +14,19 @@ import UIKit
 
 protocol MeusFilmesPresentationLogic
 {
-  func presentSomething(response: MeusFilmes.Something.Response)
+    func presentSomething(response: MeusFilmes.Something.Response)
 }
 
 class MeusFilmesPresenter: MeusFilmesPresentationLogic
 {
-  weak var viewController: MeusFilmesDisplayLogic?
-  
-  // MARK: Do something
-  
-  func presentSomething(response: MeusFilmes.Something.Response)
-  {
-    let viewModel = MeusFilmes.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
-  }
+    weak var viewController: MeusFilmesDisplayLogic?
+    
+    // MARK: Do something
+    
+    func presentSomething(response: MeusFilmes.Something.Response)
+    {
+        let viewModel = MeusFilmes.Something.ViewModel()
+        viewController?.displaySomething(viewModel: viewModel)
+    }
 }
+
