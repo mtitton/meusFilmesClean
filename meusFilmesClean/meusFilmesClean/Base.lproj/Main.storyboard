@@ -76,7 +76,7 @@
         <!--Meus Filmes-->
         <scene sceneID="pKf-Rm-TNn">
             <objects>
-                <viewController id="VA7-vy-nPl" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MeusFilmesViewController" id="VA7-vy-nPl" customClass="MeusFilmesViewController" customModule="meusFilmesClean" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eow-Mg-ZCt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

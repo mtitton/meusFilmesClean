@@ -14,7 +14,7 @@ import UIKit
 
 protocol LoginDisplayLogic: class
 {
-    func displaySomething(viewModel: Login.Something.ViewModel)
+    func displayMeusFilmes(response: Login.User.Response)
 }
 
 class LoginViewController: UIViewController, LoginDisplayLogic
@@ -68,19 +68,21 @@ class LoginViewController: UIViewController, LoginDisplayLogic
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        //doSomething()
     }
-  
-    // MARK: Do something
-    func doSomething()
-    {
-        let request = Login.Something.Request()
-        interactor?.doSomething(request: request)
-    }
-  
-    func displaySomething(viewModel: Login.Something.ViewModel)
-    {
-        //nameTextField.text = viewModel.name
+    
+    func displayMeusFilmes(response: Login.User.Response) {
+        let message = response.user.message
+        
+        if message != "Sucesso!"
+        {
+            //Exibe alert com o erro na tela
+            alert(message: message, title: "Atenção")
+        }
+        else
+        {
+            //Envia para a proxima tela
+            performSegue(withIdentifier: "meusFilmes", sender: nil)
+        }
     }
     
     @IBAction func btn_Login(_ sender: Any)

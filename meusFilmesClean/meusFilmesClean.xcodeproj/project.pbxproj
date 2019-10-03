@@ -23,6 +23,12 @@
 		A901933D234611700052CA00 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A901933C234611700052CA00 /* UserModel.swift */; };
 		A9019340234614640052CA00 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A901933F234614640052CA00 /* Extension.swift */; };
 		A9019342234624E10052CA00 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9019341234624E10052CA00 /* GoogleService-Info.plist */; };
+		A90A15FC23464066004BE8E7 /* MeusFilmesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A15F623464066004BE8E7 /* MeusFilmesPresenter.swift */; };
+		A90A15FD23464066004BE8E7 /* MeusFilmesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A15F723464066004BE8E7 /* MeusFilmesWorker.swift */; };
+		A90A15FE23464066004BE8E7 /* MeusFilmesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A15F823464066004BE8E7 /* MeusFilmesRouter.swift */; };
+		A90A15FF23464066004BE8E7 /* MeusFilmesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A15F923464066004BE8E7 /* MeusFilmesModels.swift */; };
+		A90A160023464066004BE8E7 /* MeusFilmesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A15FA23464066004BE8E7 /* MeusFilmesViewController.swift */; };
+		A90A160123464066004BE8E7 /* MeusFilmesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A15FB23464066004BE8E7 /* MeusFilmesInteractor.swift */; };
 		D944FEBF718A759CE92FD499 /* Pods_meusFilmesCleanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0868FF4A33BADDF8C89A9943 /* Pods_meusFilmesCleanTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +66,12 @@
 		A901933C234611700052CA00 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		A901933F234614640052CA00 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		A9019341234624E10052CA00 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A90A15F623464066004BE8E7 /* MeusFilmesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeusFilmesPresenter.swift; sourceTree = "<group>"; };
+		A90A15F723464066004BE8E7 /* MeusFilmesWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeusFilmesWorker.swift; sourceTree = "<group>"; };
+		A90A15F823464066004BE8E7 /* MeusFilmesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeusFilmesRouter.swift; sourceTree = "<group>"; };
+		A90A15F923464066004BE8E7 /* MeusFilmesModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeusFilmesModels.swift; sourceTree = "<group>"; };
+		A90A15FA23464066004BE8E7 /* MeusFilmesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeusFilmesViewController.swift; sourceTree = "<group>"; };
+		A90A15FB23464066004BE8E7 /* MeusFilmesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeusFilmesInteractor.swift; sourceTree = "<group>"; };
 		BBEDF8232D51B89C1B5A0AE9 /* Pods-meusFilmesClean.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meusFilmesClean.debug.xcconfig"; path = "Target Support Files/Pods-meusFilmesClean/Pods-meusFilmesClean.debug.xcconfig"; sourceTree = "<group>"; };
 		E6EA2796567AC453611F2C3F /* Pods-meusFilmesCleanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meusFilmesCleanTests.debug.xcconfig"; path = "Target Support Files/Pods-meusFilmesCleanTests/Pods-meusFilmesCleanTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,6 +165,7 @@
 		A90193282343B7B80052CA00 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A90A15F523464052004BE8E7 /* MeusFilmes */,
 				A90193292343B7DA0052CA00 /* Login */,
 			);
 			path = Scenes;
@@ -193,6 +206,19 @@
 				A901933F234614640052CA00 /* Extension.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A90A15F523464052004BE8E7 /* MeusFilmes */ = {
+			isa = PBXGroup;
+			children = (
+				A90A15F623464066004BE8E7 /* MeusFilmesPresenter.swift */,
+				A90A15F723464066004BE8E7 /* MeusFilmesWorker.swift */,
+				A90A15F823464066004BE8E7 /* MeusFilmesRouter.swift */,
+				A90A15F923464066004BE8E7 /* MeusFilmesModels.swift */,
+				A90A15FA23464066004BE8E7 /* MeusFilmesViewController.swift */,
+				A90A15FB23464066004BE8E7 /* MeusFilmesInteractor.swift */,
+			);
+			path = MeusFilmes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,14 +390,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A90A160023464066004BE8E7 /* MeusFilmesViewController.swift in Sources */,
+				A90A15FC23464066004BE8E7 /* MeusFilmesPresenter.swift in Sources */,
+				A90A15FF23464066004BE8E7 /* MeusFilmesModels.swift in Sources */,
 				A90193342343B7EE0052CA00 /* LoginViewController.swift in Sources */,
 				A90193302343B7EE0052CA00 /* LoginPresenter.swift in Sources */,
+				A90A15FE23464066004BE8E7 /* MeusFilmesRouter.swift in Sources */,
 				A90193092343891D0052CA00 /* AppDelegate.swift in Sources */,
 				A90193382343C23B0052CA00 /* LoginService.swift in Sources */,
 				A90193352343B7EE0052CA00 /* LoginInteractor.swift in Sources */,
 				A9019340234614640052CA00 /* Extension.swift in Sources */,
+				A90A160123464066004BE8E7 /* MeusFilmesInteractor.swift in Sources */,
 				A90193332343B7EE0052CA00 /* LoginModels.swift in Sources */,
 				A90193322343B7EE0052CA00 /* LoginRouter.swift in Sources */,
+				A90A15FD23464066004BE8E7 /* MeusFilmesWorker.swift in Sources */,
 				A901933D234611700052CA00 /* UserModel.swift in Sources */,
 				A90193312343B7EE0052CA00 /* LoginWorker.swift in Sources */,
 			);

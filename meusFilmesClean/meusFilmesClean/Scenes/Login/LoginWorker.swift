@@ -15,7 +15,6 @@ import UIKit
 //Criação de protocolo
 protocol LoginProtocol {
     func login(_ login: String, password: String, completionHandler: @escaping (UserModel?) -> Void)
-    //func mockLogin(_ login: String, password: String, completionHandler: @escaping (User?) -> Void)
 }
 
 class LoginWorker
@@ -31,10 +30,5 @@ class LoginWorker
     func login(_ login: String, password: String, completionHandler: @escaping (UserModel?) -> Void)
     {
         loginProt.login(login, password: password, completionHandler: completionHandler)
-    }
-    
-    func doSomeWork()
-    {
-        
     }
 }

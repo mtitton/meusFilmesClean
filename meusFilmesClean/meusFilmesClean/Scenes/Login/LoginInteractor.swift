@@ -14,7 +14,6 @@ import UIKit
 
 protocol LoginBusinessLogic
 {
-    func doSomething(request: Login.Something.Request)
     func doLogin(request: Login.User.Request)
 }
 
@@ -29,25 +28,14 @@ class LoginInteractor: LoginBusinessLogic, LoginDataStore
     var worker: LoginWorker?
     var user: UserModel!
   
-    // MARK: Do something
-    func doSomething(request: Login.Something.Request)
-    {
-//        worker = LoginWorker(<#LoginProtocol#>)
-//        worker?.doSomeWork()
-//
-//        let response = Login.Something.Response()
-//        presenter?.presentSomething(response: response)
-    }
-    
     func doLogin(request: Login.User.Request) {
         worker = LoginWorker(LoginService())
         worker?.login(request.user, password: request.password) { (response: UserModel?) in
             //Atribui o retorno na variavel que foi definida fora (com base no model)
             self.user = response
             
-            //Chama a função de salvar o ultimo usuario logado
-            //self.saveUser(request: request)
+            let response = Login.User.Response(user: response!)
+            self.presenter?.presentMeusFilmes(response: response)
         }
-        
     }
 }

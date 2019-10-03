@@ -10,11 +10,13 @@ import Foundation
 
 //Campos que voltam da API / Firebase
 struct UserModel: Decodable {
-    var userId: Int
-    var name: String
+    var userId: String
+    var email: String
+    var message: String
     
-    init(userId: Int, name: String) {
+    init(userId: String = "", email: String = "", message: String = "") {
         self.userId = userId
-        self.name = name
+        self.email = email
+        self.message = message
     }
 }

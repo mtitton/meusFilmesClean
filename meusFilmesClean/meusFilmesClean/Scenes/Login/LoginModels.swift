@@ -24,20 +24,7 @@ enum Login
         }
         struct Response
         {
-            
+            var user: UserModel
         }
     }
-  
-  enum Something
-  {
-    struct Request
-    {
-    }
-    struct Response
-    {
-    }
-    struct ViewModel
-    {
-    }
-  }
 }

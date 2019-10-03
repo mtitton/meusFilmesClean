@@ -7,6 +7,7 @@
 //
 
 import FirebaseAuth
+import UIKit
 
 class LoginService: LoginProtocol {
     func login(_ login: String, password: String, completionHandler: @escaping (UserModel?) -> Void) {
@@ -16,20 +17,24 @@ class LoginService: LoginProtocol {
             if erro == nil {
                 //Verifica se o usuario foi encontrado
                 if usuario == nil {
-                    //alert(message: "Usuário não encontrado", title: "Atenção")
+                    let retorno = UserModel.init(userId: "", email: "", message: "Usuário não encontrado, por favor, tente novamente.")
+                    
+                    //Retorna o conteudo
+                    completionHandler(retorno)
                 }
                 else
                 {
-                    //Redireciona o usuario para a tela principal (pós login)
-                    //usuario?.user.displayName
-                    let usuario = usuario?.user
-                    print(usuario)
-                    //self.performSegue(withIdentifier: "segueLogin", sender: nil)
+                    let retorno = UserModel.init(userId: (usuario?.user.uid)!, email: (usuario?.user.email)!, message: "Sucesso!")
+                    
+                    //Retorna o conteudo
+                    completionHandler(retorno)
                 }
             }
             else{
-                //self.alert(message: "Problema ao realizar a autenticação", title: "Atenção")
-                //self.exibirMensagem(titulo: "Erro ao autenticar", mensagem: "Problema ao realizar a autenticação")
+                let retorno = UserModel.init(userId: "", email: "", message: "Usuário ou senha inválido, por favor, tente novamente.")
+                
+                //Retorna o conteudo
+                completionHandler(retorno)
             }
         }
     }
